@@ -2,8 +2,6 @@ import "./globals.css";
 import Navbar from '@/components/Navbar'
 import Footer from "@/components/Footer";
 import SessionWrapper from "@/components/SessionWrapper";
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 
 export const metadata = {
   title: "Get Me A Chai - Fund your projects with chai",
