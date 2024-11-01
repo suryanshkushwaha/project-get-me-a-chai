@@ -2,6 +2,8 @@
 ## Description
 Get Me A Chai is an open-source platform inspired by Patreon, allowing creators to receive support from their fans through a simple, intuitive donation system. Built with [Next.js](https://nextjs.org/), the application enables users to create personalized pages where supporters can donate using [Razorpay](https://razorpay.com/).
 
+Live Demo: [https://get-me-a-chai-sk.vercel.app](https://get-me-a-chai-sk.vercel.app)
+
 ## Table of Contents
 - [Project Title](#get-me-a-chai-🍵)
 - [Description](#description)
