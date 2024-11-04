@@ -49,7 +49,7 @@ const Dashboard = () => {
     return (
         <>
             <ToastContainer />
-            <div className='mx-auto w-[700px] py-14 px-4'>
+            <div className='mx-auto md:w-[700px] w-auto py-14 px-4'>
                 <h1 className='text-center font-bold text-3xl'>Welcome to your Dashboard</h1>
                 <form className="max-w-2xl mx-auto" action={handleSubmit}>
                     <div className='my-2'>

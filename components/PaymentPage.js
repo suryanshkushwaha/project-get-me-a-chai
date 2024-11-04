@@ -88,10 +88,17 @@ const PaymentPage = ({ username }) => {
             <ToastContainer />
             <Script src="https://checkout.razorpay.com/v1/checkout.js"></Script>
             <div className="user-profile mb-20">
-                <div className='profile-photos relative'>
+                <div className='profile-photos relative flex justify-center'>
                     <img className="cover-image object-cover object-center w-full h-96" src={currentUser.coverpic} alt="" />
-                    <img className='profile-image absolute -bottom-[3rem] right-[42%] md:right-[46.5%] border border-white rounded-full size-28 object-cover' src={currentUser.profilepic} width={100} height={100} alt="Profile Image" />
+                    <img
+                        className='profile-image absolute -bottom-[3.5rem] border border-white rounded-full size-28 object-cover'
+                        src={currentUser.profilepic}
+                        width={100}
+                        height={100}
+                        alt="Profile Image"
+                    />
                 </div>
+
 
                 <div className="user-info flex flex-col items-center justify-center gap-2 mt-14">
                     <h1 className="text-3xl font-bold">@{username}</h1>
