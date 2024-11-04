@@ -1,4 +1,5 @@
 "use client"
+import Image from "next/image";
 import React, { useEffect, useState } from 'react'
 import Script from 'next/script'
 import { fetchuser, fetchpayments, initiate } from '@/actions/UserActions'
@@ -89,9 +90,16 @@ const PaymentPage = ({ username }) => {
             <Script src="https://checkout.razorpay.com/v1/checkout.js"></Script>
             <div className="user-profile mb-20">
                 <div className='profile-photos relative flex justify-center'>
-                    <img className="cover-image object-cover object-center w-full h-96" src={currentUser.coverpic} alt="" />
-                    <img
-                        className='profile-image absolute -bottom-[3.5rem] border border-white rounded-full size-28 object-cover'
+                    <Image
+                        className="cover-image object-cover object-center"
+                        src={currentUser.coverpic}
+                        alt=""
+                        width={1920}
+                        height={384}
+                        layout="responsive"
+                    />
+                    <Image
+                        className='profile-image absolute -bottom-[3.5rem] border border-white rounded-full object-cover'
                         src={currentUser.profilepic}
                         width={100}
                         height={100}
@@ -114,7 +122,7 @@ const PaymentPage = ({ username }) => {
                             {payments.length === 0 && <p>No payments yet</p>}
                             {payments.map((payment, index) => (
                                 <li key={index} className="supporter flex items-center gap-2">
-                                    <img className="rounded-full" src="/avatar.gif" width={50} height={50} alt="Profile Image" />
+                                    <Image className="rounded-full" src="/avatar.gif" width={50} height={50} alt="Profile Image" />
                                     <p className="font-bold">@{payment.name} donated ₹{payment.amount} with a message: &quot;{payment.message}&quot;</p>
                                 </li>
                             ))}

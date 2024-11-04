@@ -1,4 +1,5 @@
 "use client"
+import Image from "next/image";
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link'
 import { useSession, signIn, signOut } from "next-auth/react"
@@ -31,7 +32,7 @@ const Navbar = () => {
     <nav className="bg-gray-900 text-white flex justify-between items-center px-2 md:px-10 h-16">
 
       <Link href={"/"} className="logo flex justify-center items-center">
-        <img className='invert-[.25]' src="tea.gif" width={44} alt="" />
+        <Image className='invert-[.25]' src="/tea.gif" width={44} height={44} alt="" />
         <span className='font-bold'>Get Me a Chai!</span>
       </Link>
 
@@ -42,7 +43,7 @@ const Navbar = () => {
               setShowDropdown(false)
             }, 100)}} id="dropdownDefaultButton" data-dropdown-toggle="dropdown" className="text-white mx-2 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-2 py-1.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
               <span className='md:block hidden'>Account</span>
-              <img className='w-7 ms-1' src="/avatar.gif" alt="" />
+              <Image className='ms-1' src="/avatar.gif" width={28} height={28} alt="" />
             <svg className="w-2.5 h-2.5 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
               <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4" />
             </svg>
